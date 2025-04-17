@@ -1,9 +1,9 @@
 const express = require('express');
 const {
   getAllAgents,
-  addAgent,
-  agentLogin, // 👈 Login controller bhi import karo
+  agentLogin, 
   getAgentActivityLog,
+  addAgent,
 } = require('../controllers/agentsController');
 
 const router = express.Router();
@@ -15,7 +15,7 @@ router.get('/agents', getAllAgents);
 router.post('/agents', addAgent);
 
 // Agent login
-router.post('/agents/login', agentLogin); // 👈 Yeh line add karo
+router.post('/agents/login', agentLogin);
 
 // Get activity log of specific agent
 router.get('/agents/:agentId/activity-log', getAgentActivityLog);
